@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Sthe",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 0,
+      "left": 0
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": 230,
+      "left": -10,
+      "attrs": {
+        "i2cAddress": "0x3c"
+      }
+    }
+  ],
+  "connections": [
+    [ "pico:GP4",   "oled:SDA", "green",  [ "h-35", "v167" ] ],
+    [ "pico:GP5",   "oled:SCL", "yellow", [ "h-25", "v147" ] ],
+    [ "pico:3V3",   "oled:VCC", "red",    [ "h20",  "v152", "h-61" ] ],
+    [ "pico:GND.1", "oled:GND", "black",  [ "h-45", "v202" ] ]
+  ]
+}
